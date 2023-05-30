@@ -59,13 +59,12 @@ endmodule
 
 ## Output:
 ##  RTL realization
+![Screenshot (135)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/5d1850aa-449e-4837-8975-12d3f89c3f31)
 
 
-![hs1](https://user-images.githubusercontent.com/120230694/232977174-9366db32-78ab-4ef8-9b3c-07a975b4b099.png)
 
 
-![fs1](https://user-images.githubusercontent.com/120230694/232976610-1a944545-1d87-484e-9faa-bde0302eeb92.png)
-
+![Screenshot (136)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/cd685f14-8aac-46d2-983b-5b3ca4f77f31)
 
 
 
@@ -81,6 +80,8 @@ endmodule
 ## Truthtable
 
 ![HSTT](https://user-images.githubusercontent.com/120230694/232977257-40ef21e8-1660-4abe-8502-146addf8c65a.png)
+
+
 ![FSTT](https://user-images.githubusercontent.com/120230694/232977285-6f9c2b1f-490a-4b3a-9a4b-0230795ec178.png)
 
 
