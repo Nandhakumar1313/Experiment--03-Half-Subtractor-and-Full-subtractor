@@ -30,58 +30,61 @@ It can be implemented using two half subtractors and one OR gate as: Giving one 
 
 
 ## Program:
-```py
+```
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by:212222100029 
-RegisterNumber:Nandhakumar G R 
-
-module half_sub(x, y, d, b, x1);
-input x,y;
-output x1, d, b;
-xor(d, x, y);
-not(x1, x);
-and(b, x1, y);
+Developed by:G.R.NANDHAKUMAR 
+RegisterNumber:212222100029
+```
+## HALF SUBTRACTOR
+```
+module HalfSubtractor(A,B,Diff,Borrow);
+input A,B;
+output Diff,Borrow;
+wire x;
+xor (Diff, A,B);
+not(x,A);
+and(Borrow,x,B);
+endmodule
+```
+## FULL SUBTRACTOR
+```
+module FullSubtractor(A,B,C,Diff,Borrow);
+input A,B,C;
+output Diff,Borrow;
+wire p;
+assign Diff = ((A^B)^C);
+not(p,A);
+assign Borrow = ((p&B)|(p&C)|(B&C));
 endmodule
 
-module full_sub(x, y, z, d, b, x1, x2, x3, x4, x5);
-input x,y,z;
-output d, b, x1, x2, x3, x4 ,x5;
-xor(x1, x, y);
-xor(d, x1, z);
-not(x2, x);
-and(x3, x2, y);
-and(x4, x3, z);
-and(x5, y, z);
-or(b, x3, x4, x5);
-endmodule
 
 ```
 
 ## Output:
 ##  RTL realization
-![Screenshot (135)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/5d1850aa-449e-4837-8975-12d3f89c3f31)
+## HALF SUBTRACTOR
+![Screenshot (155)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/06595f4b-b457-489a-9e96-0cd519816b64)
 
+## FULL SUBTRACTOR
+![Screenshot (156)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/3455426c-324f-4ca2-a289-5262fa852476)
 
-
-
-![Screenshot (136)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/cd685f14-8aac-46d2-983b-5b3ca4f77f31)
 
 
 
 
 ## Timing diagram 
 
+## HALF SUBTRACTOR
+![Screenshot (157)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/5810debd-0c78-4eff-ad8d-df06aba28045)
 
-
-![hs2](https://user-images.githubusercontent.com/120230694/232976877-9cc736e6-7a6d-40b2-bc76-83f89c8dc24a.png)
-
-![fs2](https://user-images.githubusercontent.com/120230694/232976905-653f7fb9-de3e-4c53-a6b9-be3c261f1495.png)
+## FULL SUBTRACTOR
+![Screenshot (158)](https://github.com/Nandhakumar1313/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120230694/9b82e0f7-f593-4508-9a7c-2cebceb5421c)
 
 ## Truthtable
-
+## HALF SUBTRACTOR
 ![HSTT](https://user-images.githubusercontent.com/120230694/232977257-40ef21e8-1660-4abe-8502-146addf8c65a.png)
 
-
+## FULL SUBTRACTOR
 ![FSTT](https://user-images.githubusercontent.com/120230694/232977285-6f9c2b1f-490a-4b3a-9a4b-0230795ec178.png)
 
 
